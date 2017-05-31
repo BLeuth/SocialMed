@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+TODO http://stackoverflow.com/questions/19172596/how-do-i-create-a-register-login-php-file-for-my-website
+TODO https://data.sparkfun.com/
+<html>
+	<head>
+		<Title>CompSci</Title>
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<script language="javascript" type="text/javascript" src="login.js"></script>
+		<script language="javascript" type="text/javascript" src="mail.js"></script>
+	</head>
+	<body>
+		<div id="menubar">
+			<a href="index.html" class="dropbtn" id="homebtn" style="text-decoration:none;">Home</a>
+			<div class="dropdown" id="menudrop">
+				<button class="dropbtn">Menu</button>
+				<div class="dropdown-content">
+					<a href="posts.html">Posts</a>
+					<a href="#">Link 2</a>
+					<a href="#">Link 3</a>
+				</div>
+			</div>
+			<input class="dropdown" id="searchbar" type="text" name="search" placeholder="Search...">
+			<div class="dropdown" id="maildrop">
+				<button class="dropbtn" onclick="window.location.href='mail.html'";><img src="images/mail-icon.png" alt="mail"></button>
+			</div>
+			<div class="dropdown" id="profiledrop">
+				<button class="dropbtn">Profile</button>
+				<div class="dropdown-content">
+					<a href="profile.html">Info</a>
+					<a href="https://google.com">Log Out</a>
+				</div>
+			</div>
+		</div>
+
+			<div id="mailmenu">
+				<h3>Inbox</h3>
+				<button id="composebtn" onclick="composeMail()">Compose</button>
+				<div id='mailtemp'></div>
+				<script>mails.placeInbox()</script>
+			</div>
+
+			<div id="readmailplace" style="display: none;">
+			</div>
+
+			<div id="composemailplace" style="display: none;">
+				<strong>To: </strong>
+				<input id="sendto" placeholder="Recipient...">
+				<strong>Subject: </strong>
+				<input id="subject" placeholder="Subject...">
+				<div class="textwrapper"><textarea id="mailValue" maxlength="345" cols="2" rows="5" placeholder="Type Message"></textarea></div>
+				<button onclick="sendMail(); clearMailTexts();">Send</button>
+			</div>
+
+			<div id="sendnoteplace" style="display: none;">
+			</div>
+
+	</body>
+</html>
